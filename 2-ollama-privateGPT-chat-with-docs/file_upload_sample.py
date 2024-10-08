@@ -96,6 +96,7 @@ def main():
                         with pdfplumber.open(docx_file) as pdf:
                             page = pdf.pages[0]
                             st.write(page.extract_text())
+                            save_uploadedfile(docx_file)
                     except:
                         st.write("None")
                 elif docx_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
