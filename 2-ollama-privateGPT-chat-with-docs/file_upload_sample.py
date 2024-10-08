@@ -96,7 +96,9 @@ def main():
                         with pdfplumber.open(docx_file) as pdf:
                             page = pdf.pages[0]
                             st.write(page.extract_text())
+                            st.write("uploading the files.. ")
                             save_uploadedfile(docx_file)
+                            st.write("uploading the files completed.. ")
                     except:
                         st.write("None")
                 elif docx_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
