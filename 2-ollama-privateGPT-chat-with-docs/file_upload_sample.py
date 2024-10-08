@@ -34,13 +34,13 @@ def read_pdf_with_pdfplumber(file):
 #       return text 
 
 # Fxn
-@st.cache
+#@st.cache
 def load_image(image_file):
     img = Image.open(image_file)
     return img
 
 def save_uploadedfile(uploadedfile):
-     with open(os.path.join("/home/ubuntu/genai-demo1/Ollama/2-ollama-privateGPT-chat-with-docs/source_documents/",uploadedfile.name),"wb") as f:
+     with open(os.path.join("/home/ubuntu/genai-demo1/Gen-ai-demo1/2-ollama-privateGPT-chat-with-docs/source_documents/",uploadedfile.name),"wb") as f:
          f.write(uploadedfile.getbuffer())
      return st.success("Saved File:{} to tempDir".format(uploadedfile.name))
 
